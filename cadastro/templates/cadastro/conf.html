@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/conf.css' %}">
+    <title>Configurações</title>
+</head>
+
+<body class="light">
+
+    <header>
+        <div class="logo">
+            <a href="{% url 'dashboard' %}"><img src="{% static 'img/uu.png' %}" height="80" alt="logo"></a>
+            <h1>Configurações</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Plano de Fundo</h1>
+        <p> Alternar entre o tema claro e escuro da página.</p>
+
+        
+        <button class="theme-toggle-button" onclick="alternarTema()">Alterar Tema</button>
+    </div>
+
+    <div class="fonte">
+        <h1>Tamanho de Fonte</h1>
+        <p>Escolha o tamanho desejado:</p>
+
+       
+        <select id="size" onchange="changeFontSize()">
+            <option value="14px">Pequeno</option>
+            <option value="16px" selected>Médio</option>
+            <option value="18px">Grande</option>
+            <option value="20px">Muito Grande</option>
+        </select>
+    </div>
+
+    <script>
+       
+        function alternarTema() {
+            const body = document.body;
+            body.classList.toggle('light'); 
+            body.classList.toggle('dark');  
+        }
+
+      
+        function changeFontSize() {
+            const fontSize = document.getElementById('size').value; 
+            document.body.style.fontSize = fontSize; 
+        }
+    </script>
+
+    <br>
+
+    <div class="suporte">
+        <h1>Suporte</h1>
+        <p>Dúvidas e Problemas, Contate o suporte</p>
+        <a href="https://www.instagram.com/hemoconecta/profilecard/?igsh=MXFpcmx1cWhicThsMQ==" target="_blank"><button class="button1">Relatar Problema</button></a>
+    </div>
+
+    <div class="sair">
+        <h1>Menu Principal</h1>
+        <p>Clique para retornar ao inicio</p>
+        <a href="{% url 'dashboard' %}"><button class="button3">Voltar</button></a>
+        
+    </div>
+
+</body>
+</html>

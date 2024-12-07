@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/LOGO.png' %}">
+    <title>Perfil do Doador</title>
+    <link rel="stylesheet" href="{% static 'css/agendamento.css' %}">
+</head>
+
+<body>
+    <header>
+        <!--Cabeçalho de navegação-->
+        <nav style="height: 100%">
+            <div class="logo-nav">
+                <a href="{% url 'agendamento' %}"><img src="{% static 'img/LOGO.png' %}" alt="" /></a>
+                <h1>HEMOCONECTA</h1>
+            </div>
+
+            <div class="menu-nav">
+                <ul>
+                    <li>
+                        <a href="#divagendamento">Agendamento</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/hemoconecta/profilecard/?igsh=MXFpcmx1cWhicThsMQ==" target="_blank">Suporte Técnico</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'inicial' %}">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Fim da navegação-->
+
+    <main>
+        <h2 class="main-titles">PÁGINA DO DOADOR</h2>
+        <section id="info-doador">
+            {% for info in infomacao %}
+            <img src="{% static 'img/perfil.png' %}" alt="">
+            <div id="info-meta">
+
+
+                <ul>
+                    <li class="main-chaves">Nome: <span class="main-valores">{{ info.nome }}</span></li>
+                    <li class="main-chaves">E-mail: <span class="main-valores">{{ info.email }}</span></li>
+                    <li class="main-chaves">Tipo Sanguíneo: <span class="main-valores">{{ info.tipo_sang }}</span></li>
+                    <li class="main-chaves">Peso: <span class="main-valores">{{ info.peso }}</span></li>
+                </ul>
+            </div>
+            <div id="info-contato">
+
+                <ul>
+                    <li class="main-chaves">Telefone: <span class="main-valores">{{ info.telefone }}</span></li>
+                    <li class="main-chaves">Enedereço: <span class="main-valores">{{ info.endereco }}, {{ info.bairro }}, {{ info.cidade }}, {{ info.uf }}</span></li>
+                    <li class="main-chaves">CEP: <span class="main-valores">{{ info.cep }}</span></li>
+                </ul>
+
+            </div>
+
+
+            {% endfor %}
+        </section>
+        <div id="titles-toggle">
+            <h2 class="main-titles"><a onclick="toggleDivs()" href="#">HISTÓRICO DE DOAÇÕES</a></h2>
+            <h2 class="main-titles"><a href="#">AGENDAMENTO</a></h2>
+        </div>
+        <!-- Histórico -->
+        <section id="historico-doador">
+            {% for dados in dadosA %}
+
+
+            <div class="historico-cards">
+                <img class="cards-img" src="{% static 'img/aceno.png' %}" alt="">
+                <p>ÚLTIMA DOAÇÃO</p>
+                <table>
+                    <tr>
+                        <th>DATA</th>
+                        <td>3 de Dezembro de 2024</td>
+                    </tr>
+                    <tr class="table-bottom">
+                        <th>CAMPANHA</th>
+                        <td>Dezembro Vermelho</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="historico-cards">
+                <img class="cards-img" src="{% static 'img/abraco.png' %}" alt="">
+                <p>PRÓXIMA DOAÇÃO</p>
+                <table>
+                    <tr>
+                        <th>DATA</th>
+                        <td>{{ dados.agendamento_data }}</td>
+                    </tr>
+                    <tr class="table-bottom">
+                        <th>LOCAL</th>
+                        <td>HEMOPE</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="historico-cards">
+                <img class="cards-img" src="{% static ' img/grupo.png' %}" alt="">
+                <p>TOTAL DE DOAÇÕES</p>
+                <table>
+                    <tr>
+                        <th>1º DOAÇÃO</th>
+                        <td>3 de Dezembro de 2024</td>
+                    </tr>
+                    <tr class="table-bottom">
+                        <th>TOTAL</th>
+                        <td>1 DOAÇÕES</td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+        </section>
+
+            
+
+        <!-- Agendamento -->
+        <section id="divagendamento">
+            <form action="" id="form" class="form" method="post">
+                {% csrf_token %}
+                <label class="label-input" for="nomeA">
+                    <input type="text" placeholder="Nome" name="nomeA" id="nomeA">
+                </label>
+                <label class="label-input" for="cpfA">
+                    <input type="text" name="cpfA" id="cpfA" placeholder="CPF">
+                </label>
+
+                <label class="label-input" for="agendamento_data">
+                    <input type="date" name="agendamento_data" id="agendamento_data" placeholder="Data">
+                </label>
+
+
+
+                <select name="agendamento_hora" id="agendamento_hora" required>
+                    <option value="">Horário</option>
+                    <option value="07:30">07:30</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                </select>
+
+                <button onclick="alerta()" id="agendar" class="btn btn-second">Agendar</button>
+            </form>
+
+
+
+
+
+            <div id="confirmacao" style="display: none; color: green; margin-top: 20px;">
+                Agendamento realizado com sucesso!
+            </div>
+        </section>
+
+
+        <section id="premios">
+            <h2>PREMIAÇÕES</h2>
+            <div id="premios-info">
+                <img id="mascote-img" src="{% static 'img/mascote.png' %}" alt="">
+                <p>Essas premiações podem ser uma forma de agradecer e reconhecer a importância do trabalho dos doadores
+                    de sangue.</p>
+                <ol id="premios-lista">
+                    <li>Brindes personalizados</li>
+                    <li>Vouchers de descontos em lojas, restaurantes e cinemas</li>
+                    <li>Ingressos para eventos culturais e esportivos</li>
+                </ol>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obter horários já reservados do backend
+            fetch('/get-unavailable-slots/')
+                .then(response => response.json())
+                .then(data => {
+                    const unavailableSlots = data.unavailable_slots; // Lista de horários indisponíveis no formato ISO
+                    const dateInput = document.querySelector('input[name="data_horario"]');
+
+                    dateInput.addEventListener('input', function () {
+                        const selectedDate = new Date(this.value);
+
+                        // Validar se o dia é de segunda a sábado (domingo é 0, sábado é 6)
+                        if (selectedDate.getDay() === 0) {
+                            alert('O agendamento só pode ser feito de segunda a sábado.');
+                            this.value = '';
+                            return;
+                        }
+
+                        // Validar se o horário está entre 8:00 e 18:00
+                        if (selectedDate.getHours() < 8 || selectedDate.getHours() >= 18) {
+                            alert('Os horários permitidos são entre 8:00 e 18:00.');
+                            this.value = '';
+                            return;
+                        }
+
+                        // Validar se o horário está na lista de horários ocupados
+                        const selectedDateISO = selectedDate.toISOString().slice(0, 16); // Formato compatível
+                        if (unavailableSlots.includes(selectedDateISO)) {
+                            alert('Esse horário já está reservado! Escolha outro.');
+                            this.value = '';
+                        }
+                    });
+
+                    // Alterar o comportamento do input para que sempre acrescente "00" aos minutos
+                    dateInput.addEventListener('change', function () {
+                        const selectedDate = new Date(this.value);
+                        const hour = selectedDate.getHours();
+                        const formattedTime = `${selectedDate.toISOString().slice(0, 10)}T${String(hour).padStart(2, '0')}:00`;
+
+                        // Atualiza o campo de data e hora com os minutos ajustados para 00
+                        this.value = formattedTime;
+                    });
+                });
+        });
+
+        function alerta() {
+        alert("Agendamento Realizado com SUCESSO!!")
+        };
+    </script>
+
+</body>
+
+</html>

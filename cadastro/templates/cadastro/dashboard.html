@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="icon" href="{% static 'img/LOGO.png' %}">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <!--Cabeçalho de navegação-->
+        <nav style="height: 100%">
+          <div class="logo-nav">
+            <a href="{% url 'dashboard' %}"><img src="{% static 'img/uu.png' %}" alt="" /></a>
+          </div>
+    
+          <div class="menu-nav">
+              <input type="text" class="input" placeholder="Pesquisar Doadores">
+              <ul>
+                <li>
+                  <a href="{% url 'inicial' %}">Sair</a>
+              </ul>
+          </div>
+        </nav>
+      </header>
+    <section class="container">
+        <div class="perfil">
+            <img class="icon-perfil" src="{% static 'img/perfil.png' %}" alt="">
+            <h1>ADMIN</h1>
+
+            <hr class="hr-linha">
+            <div class="tags">
+                <a href="{% url 'conf' %}">Configuração</a>
+                <a href="{% url 'historico' %}">Histórico</a>
+                <a id="not" href="{% url 'tabela' %}">Notificação</a>
+            </div>
+            <h2>Meta Diária De Doações De <br> Sangue:</h2>
+            <h1 class="meta">1 a 600</h1>
+        </div>
+        <div class="pai">
+            <div class="filho">
+                <div class="img-h1">
+                    <img src="{% static 'img/bolsa.png' %}" alt="">
+                    <h3>Regular</h3>
+                </div>
+                <div>
+                    <h3>Status de Sangue</h3>
+                </div>
+            </div>
+            <div class="filho">
+                <div class="img-h1">
+                    <img src="{% static 'img/cadastro1.png' %}" alt="">
+                    <h3>1</h3>
+                </div>
+                <div>
+                    <h3>Cadastros</h3>
+                </div>
+            </div>
+            <div class="filho">
+                <div class="img-h1">
+                    <img src="{% static 'img/gota.png' %}" alt="">
+                    <h3>1</h3>
+                </div>
+                <div>
+                    <h3>Doações</h3>
+                </div>
+            </div>
+
+
+    </section>
+    </div>
+
+    <div class="grafico">
+        <h1>Gráfico do Total de Doações do HEMOPE</h1>
+        <div class="tipo-sangue">
+            <h3>A+</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>A-</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>B+</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>B-</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>O+</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>O-</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>AB+</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+        <div class="tipo-sangue">
+            <h3>AB-</h3>
+            <div class="grafico-linha"></div>
+            <h3>100%</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    height: 80px;
+    background: linear-gradient(to right, #004aad 10%, #fa4949);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    height: 100%;
+}
+
+
+.logo-nav h1 {
+    color: #fff;
+    font-size: xx-large;
+}
+
+.logo-nav img {
+    width: 70px;
+}
+
+.menu-nav {
+    width: 50%;
+    display: flex;
+    margin-right: 10%;
+    align-items: center;
+}
+
+
+.menu-nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+.menu-nav ul li {
+    text-align: center;
+    width: 33%;
+
+}
+
+.menu-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: x-large;
+}
+
+.menu-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.banneres {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bann {
+    display: flex;
+    animation: deslizar 23s infinite;
+}
+
+.bann img {
+    width: 100%;
+    height: auto;
+    justify-content: right;
+}
+
+.blood-types {
+    background-color: #043069;
+    padding: 20px;
+    text-align: center;
+}
+
+.blood-types h3{
+    color: #fff;
+}
+
+.blood-types h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.blood-types .blood-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.blood-icons div {
+    width: 50px;
+    height: 50px;
+    background-color: #8b0000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 14px;
+
+}
+
+.pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 15.6%; */
+    background-color: #043069;
+}
+
+#explicacao {
+    width: 50%;
+
+}
+
+#explicacao p{
+    color: #fff;
+}
+
+.maps {
+    width: 100%;
+    /* margin-left: 15.6%; */
+}
+
+.footer {
+    text-align: center;
+    background-color: #043069;
+}
+
+.footer img{
+    width: 100px;
+}
+
+.informacao{
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.footer .info p, a {
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+}
+.linha{
+    border: 1px solid #fa4949;
+}
+
+
+
+/* Animação do carrosel */
+
+@keyframes deslizar {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@media (max-width: 1551px){
+    .bann{
+        height: 500px;
+    }
+
+}

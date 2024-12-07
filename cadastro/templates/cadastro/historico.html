@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico</title>
+    <link rel="stylesheet" href="{% static 'css/historico.css' %}">
+    <link rel="icon" href="{% static 'img/LOGO.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    {% for info in infomacao %}
+    {% for dados in dadosA %}
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Histórico de Doações - HEMOPE</h1>
+            <p>Histórico de Atividades do Usuario</p>
+        </header>
+
+        <h2></h2>
+        <br><br>
+        <div class="user-info">
+            <h2>Informações do Usuário</h2>
+            <ul>
+                <li><strong>Nome:</strong> {{ info.nome }}</li>
+                <li><strong>Tipo Sanguíneo:</strong> {{ info.tipo_sang }}</li>
+                <li><strong>Email:</strong> {{ info.email }}</li>
+            </ul>
+        </div>
+
+        <div class="user-history">
+            <div class="activity-section">
+                <h3>Acessos ao Site</h3>
+                <ul>
+                    <li><strong>Total de Acessos ao Site:</strong> 5 vezes</li>
+                    <li><strong>Último Acesso:</strong> 03/12/2024</li>
+                    <li><strong>Tempo Médio de Acesso:</strong> 4 minutos</li>
+                </ul>
+            </div>
+
+            <div class="activity-section">
+                <h3>Histórico de Doações</h3>
+                <ul>
+                    <li><strong>Total de Doações Realizadas:</strong> 1 doações</li>
+                    <li><strong>Última Doação:</strong> {{ dados.agendamento_data }}</li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="voltar"><a href="{% url 'dashboard' %}">Voltar</a></button>
+    {% endfor %}
+    {% endfor %}
+    </div>
+</body>
+
+</html>

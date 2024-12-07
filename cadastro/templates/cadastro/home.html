@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  <link rel="icon" href="{% static 'img/LOGO.png' %}">
+  <title>Hemoconecta</title>
+</head>
+
+<body>
+  <header>
+    <!--Cabeçalho de navegação-->
+    <nav style="height: 100%">
+      <div class="logo-nav">
+        <a href="{% url 'inicial' %}"><img src="{% static 'img/LOGO.png' %}" alt="" /></a>
+        <h1>HEMOCONECTA</h1>
+      </div>
+
+      <div class="menu-nav">
+        <ul>
+          <li>
+            <a href="{% url 'login' %}">Login</a>
+          </li>
+          <li>
+            <a href="{% url 'cadastro' %}">Cadastre-se</a>
+          </li>
+          <li>
+            <a href="#explicacao">Como doar</a>
+         </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--Fim da navegação-->
+
+  <div class="banneres">
+    <!--Carrossel de imagens-->
+    <div class="bann">
+      <img src="{% static 'img/banne1.png' %}" alt="banner1" />
+      <img src="{% static 'img/banne2.png' %}" alt="banner2" />
+      <img src="{% static 'img/banne3.png' %}" alt="banner3" />
+      <img src="{% static 'img/banne4.png' %}" alt="campanha de sangue" />
+      <img src="" alt="sangue" />
+    </div>
+  </div>
+  <!--Fim do Carrosel-->
+  <section class="blood-types">
+    <h3>BANCO DE ESTOQUE ATUAL:</h3>
+    <div class="blood-icons">
+
+      <img src="{% static 'img/a+.png' %}" height="80" width="80">
+      <img src="{% static 'img/a-.png' %}" height="80" width="80">
+      <img src="{% static 'img/b+.png' %}" height="80" width="80">
+      <img src="{% static 'img/b-.png' %}" height="80" width="80">
+      <img src="{% static 'img/0-.png' %}" height="80" width="80">
+      <img src="{% static 'img/ab-.png' %}" height="80" width="80">
+      <img src="{% static 'img/ab+.png' %}" height="80" width="80">
+      <img src="{% static 'img/o+.png' %}" height="80" width="80">
+      <img src="{% static 'img/pose1.png' %}" height="80" width="80">
+
+
+    </div>
+  </section>
+  <section class="pai">
+    <div class="mascote">
+      <img src="{% static 'img/mascote1.png' %}" alt="Massacote" />
+    </div>
+    <div id="explicacao">
+      <p style="font-size: 25px;">
+        Para doar sangue, é preciso agendar o atendimento em um hemocentro. Alguns locais permitem encaixes
+        dependendo da disponibilidade de vagas.
+        É importante verificar se há medicamentos que possam impedir a doação. Pessoas com anemia não podem doar.
+        A doação de sangue é realizada por profissionais de saúde treinados, e o material utilizado é de uso único,
+        estéril e descartável. A cada doação, é coletada uma bolsa de sangue de aproximadamente 450 ml.
+      </p>
+    </div>
+  </section> <!--Fim da section pai-->
+  <div>
+    <iframe class="maps"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.475716930329!2d-34.90054652463324!3d-8.052859780445491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18e7caa3ba43%3A0x5cacada93b530a37!2sHemope%20-%20Funda%C3%A7%C3%A3o%20de%20Hematologia%20e%20Hemoterapia%20de%20Pernambuco!5e0!3m2!1spt-BR!2sbr!4v1732717521861!5m2!1spt-BR!2sbr"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <footer class="footer">
+  <a href="{% url 'inicial' %}"> <img src="{% static 'img/LOGO.png' %}" alt=""></a>
+    <div class="linha"></div>
+    <section class="informacao">
+      <div class="info">
+        <a href="#">Sobre nós</a>
+      </div>
+      <div class="info">
+        <p>Rua Joaquim Nabuco, 171, Graças, Recife</p>
+      </div>
+      <div class="info">
+        <p>(81)3557-3417</p>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>

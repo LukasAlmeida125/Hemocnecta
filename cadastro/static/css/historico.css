@@ -1,0 +1,135 @@
+/* Resetando as configurações padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container principal do dashboard */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Cabeçalho */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #2a5d84;
+}
+
+.dashboard-header p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Informações do Usuário */
+.user-info {
+    margin-bottom: 40px;
+    
+}
+
+.user-info h2 {
+    font-size: 1.8rem;
+    color: #2a5d84;
+    margin-bottom: 10px;
+}
+
+.user-info ul {
+    list-style-type: none;
+}
+
+.user-info ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+.user-info ul li strong {
+    font-weight: bold;
+}
+
+/* Histórico de Atividades */
+.user-history {
+    margin-top: 20px;
+}
+
+.activity-section {
+    margin-bottom: 30px;
+}
+
+.activity-section h3 {
+    font-size: 1.6rem;
+    color: #2a5d84;
+    margin-bottom: 10px;
+}
+
+.activity-section ul {
+    list-style-type: none;
+}
+
+.activity-section ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+}
+
+.activity-section ul li::before {
+    position: absolute;
+    left: 0;
+    color: #2a5d84;
+}
+
+/* Sublistas */
+.activity-section ul li ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.activity-section ul li ul li {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Estilos gerais para links */
+a {
+    color: #2a5d84;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.voltar{
+    background-color: #2a5d84;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+}
+
+.voltar a{
+    color: #fff;
+    font-size: large;
+}

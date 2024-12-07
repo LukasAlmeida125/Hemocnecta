@@ -1,0 +1,95 @@
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 20px;
+    
+}
+
+/* Painel de Feed */
+.w3-panel {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+}
+
+/* Estilo da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo do ícone */
+table i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Estilo para o tempo */
+.time {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Cores dos ícones */
+.w3-text-blue {
+    color: #2196F3;
+}
+
+.w3-text-red {
+    color: #F44336;
+}
+
+.w3-text-yellow {
+    color: #FFEB3B;
+}
+
+.w3-text-green {
+    color: #4CAF50;
+}
+
+/* Linha alternada para cores de fundo */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efeito hover na linha da tabela */
+table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Responsividade: Ajusta a tabela para telas pequenas */
+@media (max-width: 768px) {
+    table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table i {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+}

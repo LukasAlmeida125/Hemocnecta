@@ -1,0 +1,365 @@
+/* Reset geral para todos os elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* Definindo uma fonte básica para todos os elementos */
+}
+
+/* Resetando o estilo de links */
+a {
+    text-decoration: none;
+    /* Remover sublinhado dos links */
+    color: inherit;
+    /* Herda a cor do texto pai */
+}
+
+/* Definir um padrão para listas */
+ul,
+ol {
+    list-style: none;
+    /* Remover os marcadores de lista */
+}
+
+/* Evitar que o botão tenha estilo padrão de borda e background */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    /* Herda o estilo da fonte do elemento pai */
+    cursor: pointer;
+}
+
+/* Definir comportamento de tabelas */
+table {
+    border-collapse: collapse;
+    /* Evita espaços entre as células da tabela */
+    width: 100%;
+    /* Garante que a tabela ocupe toda a largura disponível */
+}
+
+th,
+td {
+    padding: 0;
+    /* Remover padding de células */
+    text-align: left;
+}
+
+/* Resetando campos de formulário */
+input,
+select,
+textarea,
+button {
+    font: inherit;
+    /* Garantir que todos os campos usem a mesma fonte do documento */
+    outline: none;
+    /* Remover contorno padrão dos campos */
+}
+
+/* Remover bordas nos campos de input do tipo texto e textarea */
+input[type="text"],
+input[type="password"],
+textarea {
+    border: 1px solid transparent;
+}
+
+/* Resetando o estilo de imagens */
+img {
+    display: block;
+    /* Remover o espaço abaixo das imagens (comportamento padrão de imagens inline) */
+    max-width: 100%;
+    /* Tornar as imagens responsivas */
+}
+
+/* Resetar o comportamento de iframes */
+iframe {
+    border: none;
+    /* Remover a borda padrão */
+}
+
+/* Remover o estilo de figuras */
+figure {
+    margin: 0;
+    /* Remover margens */
+}
+
+/* Resetar os estilos de cabeçalhos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    /* Herda o tamanho da fonte */
+    font-weight: normal;
+    /* Define o peso da fonte como normal */
+    margin: 0;
+    /* Remove margens padrões */
+}
+
+/* Resetar o estilo de parágrafos */
+p {
+    margin: 0;
+    /* Remover margens */
+}
+
+/* Resetar o estilo de elementos de formatação */
+strong,
+b {
+    font-weight: inherit;
+    /* Usar a mesma espessura de fonte do texto pai */
+}
+
+em,
+i {
+    font-style: inherit;
+    /* Usar o estilo de fonte do texto pai */
+}
+
+/* início <header> */
+
+header {
+    height: 80px;
+    background: linear-gradient(to right, #004aad 10%, #fa4949);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    height: 100%;
+}
+
+
+.logo-nav h1 {
+    color: #fff;
+    font-size: xx-large;
+}
+
+.logo-nav img {
+    width: 70px;
+}
+
+.menu-nav {
+    width: 50%;
+    display: flex;
+    margin-right: 10%;
+    align-items: center;
+}
+
+
+.menu-nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+.menu-nav ul li {
+    text-align: center;
+    width: 33%;
+
+}
+
+.menu-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: x-large;
+}
+
+.menu-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* início <main> */
+
+.main-titles {
+    margin: 20px 30px 20px 30px;
+}
+
+#info-meta li,
+#info-contato li {
+    padding: 5px;
+}
+
+#info-doador {
+    margin: 20px 30px 20px 30px;
+    background-color: #cddef8;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#info-doador img {
+    width: 150px;
+    height: auto;
+}
+
+.main-chaves {
+    font-weight: 600;
+}
+
+.main-valores {
+    font-weight: 400;
+}
+
+
+/* */
+
+.main-titles {
+    font-weight: 700;
+}
+
+#historico-doador {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F4F4FE;
+}
+
+.cards-img {
+    width: 100px;
+}
+
+.historico-cards p {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.historico-cards {
+    background-color: #FDF0D5;
+}
+
+#testet {
+    display: flex;
+    flex-direction: column;
+}
+
+td,
+th {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 10px;
+}
+
+th {
+    border-right: 1px solid;
+}
+
+.historico-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 30%;
+    border: solid 1px black;
+    border-radius: 22px;
+    margin: 20px 0 50px 0;
+
+}
+
+table td,
+table th {
+    padding: 20px;
+}
+
+
+#premios h2 {
+    background-color: #DC3441;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    padding: 14px 0 14px 0;
+}
+
+#premios-info {
+    display: flex;
+    align-items: center;
+
+}
+
+#mascote-img {
+    width: 140px;
+    margin-top: 16px;
+}
+
+#premios-lista {
+    list-style: circle;
+    margin-left: 30px;
+    padding-left: 8px;
+}
+
+#premios-info p {
+    border-right: 2px solid gray;
+    padding: 20px 8px 20px 0;
+
+}
+
+#titles-toggle {
+    display: flex;
+    flex-direction: row;
+}
+
+#agendamento {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input,
+select {
+    padding-left: 10px;
+    height: 30px;
+    border: 1px solid #f53e3e;
+    background-color: #ffe6e6;
+    border-radius: 20px;
+    margin: 8px;
+    width: 60%;
+    outline: none;
+}
+
+.none {
+    display: none;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    margin-top: 1rem;
+}
+
+.btn-second {
+    background-color: #DC3441;
+    border: 1px solid #fa4949;
+    transition: background-color 0.5s;
+}
+
+.btn-second:hover {
+    background-color: #fff;
+    color: #fa4949;
+    border: 1px solid #fa4949;
+}

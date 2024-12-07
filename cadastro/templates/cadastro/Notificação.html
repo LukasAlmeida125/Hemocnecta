@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Notificação.css' %}">
+    <title>Notificações com Ícone e Botão</title>
+    
+</head>
+<body background="dragonball-8096947_1920.jpg">
+    <div class="notification">
+        <div class="icon-filho">
+            <img src="{% static 'img/icons8.png' %}" alt="Ícone" class="icon-img">
+        </div>
+        <span class="notification-text">Notificações</span>
+        <a href="{% url 'tabela' %}"><button class="notification-button">Ação</button></a>
+        <div class="badge">10</div>
+    </div>
+</body>
+</html>

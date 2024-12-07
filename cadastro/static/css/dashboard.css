@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+
+
+header {
+    height: 80px;
+    background: linear-gradient(to right, #004aad 10%, #fa4949);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    height: 100%;
+}
+
+
+.logo-nav img {
+    width: 100px;
+}
+
+.menu-nav {
+    width: 50%;
+    display: flex;
+    margin-right: 10%;
+    align-items: center;
+}
+
+
+.menu-nav ul {
+    justify-content: end;
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+.menu-nav ul li {
+    text-align: center;
+    width: 33%;
+
+}
+
+.menu-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: xx-large;
+}
+
+.menu-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.input {
+    border-radius: 20px;
+    border: none;
+    height: 35px;
+    width: 300px;
+    font-size: x-large;
+    padding-left: 10px;
+    outline: none;
+}
+
+.container {
+    display: flex;
+}
+
+.perfil {
+    padding-top: 1%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+}
+
+.hr-linha {
+    width: 300px;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.meta {
+    color: #004aad;
+    margin-top: 5%;
+    font-size: xxx-large;
+}
+
+.icon-perfil {
+    width: 100px;
+}
+
+hr {
+    width: 300px;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-around;
+}
+
+.perfil a {
+    color: black;
+    text-decoration: none;
+    font-size: xx-large;
+    margin-bottom: 20%;
+
+}
+
+#not {
+    margin-bottom: 50%;
+}
+
+.pai {
+    display: flex;
+    width: 100%;
+}
+
+.filho {
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed blue;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top: 3%;
+    height: 35%;
+    width: 20%;
+    background-color: #004aad;
+}
+
+.filho img {
+    height: 70%;
+}
+
+.img-h1 {
+    display: flex;
+}
+
+.filho h3 {
+    color: #fff;
+    font-size: xxx-large;
+}
+
+.grafico {
+    width: 75%;
+    margin-top: -15%;
+    height: 800px;
+    margin-left: 20%;
+}
+
+.tipo-sangue {
+    border: 3px solid black;
+    height: 50px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+}
+
+.grafico-linha {
+    border: 3px solid blue;
+    width: 90%;
+}
+
+@media (max-width: 1550px) and (min-width: 1441px) {
+
+    .pai {
+        margin-right: 10%;
+    }
+
+
+    .filho {
+        width: 30%;
+        height: 35%;
+    }
+
+    .filho img {
+        height: 50%;
+    }
+
+    .filho h3 {
+        color: #fff;
+        font-size: xx-large;
+    }
+
+    .grafico {
+        margin-top: -20%;
+        margin-left: 25%;
+    }
+
+    .tipo-sangue {
+        width: 90%;
+    }
+
+    .grafico h1 {
+        font-size: x-large;
+    }
+
+    .tags {
+        height: 50%;
+        justify-content: center;
+    }
+
+}
